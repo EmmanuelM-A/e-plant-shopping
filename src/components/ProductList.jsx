@@ -6,6 +6,7 @@ import { addItem } from '../redux/CartSlice';
 import '../styles/CartItem.css';
 import Navbar from './NavBar';
 import plantsData from '../assets/data/plants-data.json';
+import '../styles/ProductList.css';
 
 function ProductList({ onHomeClick }) {
     const [showCart, setShowCart] = useState(false);
@@ -13,9 +14,6 @@ function ProductList({ onHomeClick }) {
     const [addedToCart, setAddedToCart] = useState({});
 
     const [plantsArray, setPlantsArray] = useState([]);
-
-    const PLANT_DATA = `${import.meta.env.BASE_URL}/assets/data/plants-data.json`;
-
 
     useEffect(() => {
         setPlantsArray(plantsData);
