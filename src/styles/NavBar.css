@@ -1,0 +1,49 @@
+.navbar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: '20px';
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+.branding h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.branding i {
+    font-size: 14px;
+    color: #e0e0e0;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-right a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.cart-icon {
+    width: 30px;
+    height: 30px;
+    fill: white;
+}
