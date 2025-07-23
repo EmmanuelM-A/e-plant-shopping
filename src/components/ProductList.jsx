@@ -5,6 +5,7 @@ import { addItem } from '../redux/CartSlice';
 
 import '../styles/CartItem.css';
 import Navbar from './NavBar';
+import plantsData from '../assets/data/plants-data.json';
 
 function ProductList({ onHomeClick }) {
     const [showCart, setShowCart] = useState(false);
@@ -13,11 +14,12 @@ function ProductList({ onHomeClick }) {
 
     const [plantsArray, setPlantsArray] = useState([]);
 
+    const PLANT_DATA = `${import.meta.env.BASE_URL}/assets/data/plants-data.json`;
+
+
     useEffect(() => {
-        fetch('../assets/data/plants-data.json') // path is from the public folder root
-            .then(response => response.json())
-            .then(data => setPlantsArray(data))
-            .catch(err => console.error("Failed to load data", err));
+        setPlantsArray(plantsData);
+        console.log("Loaded data:", plantsData);
     }, []);
 
     const dispatch = useDispatch();
